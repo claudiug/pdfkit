@@ -26,3 +26,13 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+FEATURES
+1. as a user I want to fill a form, press submit and I will get an email with a link where I can download a pdf
+2. as a user I can preview the cv before I press submit
+3. as a user I will get an email with a key to check the old cv
+4. as a user I can enter the key and see all the previews cv
+5. as a user I can mark a cv for delete
+6. as anadmin I can run a task the clean-ups the S3 bucket for all cv mark as delete
+7. as an admin I can delete all the cv
+

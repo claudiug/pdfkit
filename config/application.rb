@@ -17,7 +17,7 @@ Bundler.require(*Rails.groups)
 module Pdfcv
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
+    # Application configurneratation should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
     # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
@@ -29,6 +29,16 @@ module Pdfcv
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+    config.generators do |g|
+        g.test_framework :rspec,
+        fixtures: true,
+        view_specs: false,
+        helper_specs: false,
+        routing_specs: false,
+        controller_specs:true,
+        request_specs:false
+        g.fixture_replacement :factory_girl, dir:'spec/factories'
+    end
     config.active_record.raise_in_transactional_callbacks = true
   end
 end
